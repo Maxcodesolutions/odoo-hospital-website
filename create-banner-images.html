@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banner Image Generator</title>
+    <style>
+        body { margin: 0; padding: 20px; font-family: Arial, sans-serif; }
+        .banner { 
+            width: 800px; 
+            height: 400px; 
+            margin: 20px 0; 
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .banner1 { background: linear-gradient(135deg, #2563eb, #3b82f6); }
+        .banner2 { background: linear-gradient(135deg, #10b981, #34d399); }
+        .banner3 { background: linear-gradient(135deg, #f59e0b, #fbbf24); }
+        .download-btn {
+            background: #2563eb;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Banner Image Generator</h1>
+    <p>Right-click on each banner and select "Save image as..." to download them.</p>
+    
+    <div class="banner banner1" id="banner1">
+        Hospital Dashboard Overview<br>
+        <small style="font-size: 16px; opacity: 0.9;">Real-time insights into patient care, bed occupancy, and operational metrics</small>
+    </div>
+    <button class="download-btn" onclick="downloadBanner('banner1', 'odoo-dashboard-1.png')">Download Banner 1</button>
+    
+    <div class="banner banner2" id="banner2">
+        Patient Management Interface<br>
+        <small style="font-size: 16px; opacity: 0.9;">Comprehensive patient records, appointments, and treatment tracking system</small>
+    </div>
+    <button class="download-btn" onclick="downloadBanner('banner2', 'odoo-dashboard-2.png')">Download Banner 2</button>
+    
+    <div class="banner banner3" id="banner3">
+        Analytics & Reporting<br>
+        <small style="font-size: 16px; opacity: 0.9;">Advanced analytics dashboard with customizable reports and performance metrics</small>
+    </div>
+    <button class="download-btn" onclick="downloadBanner('banner3', 'odoo-dashboard-3.png')">Download Banner 3</button>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script>
+        function downloadBanner(elementId, filename) {
+            const element = document.getElementById(elementId);
+            html2canvas(element, {
+                width: 800,
+                height: 400,
+                scale: 2,
+                backgroundColor: null
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = filename;
+                link.href = canvas.toDataURL();
+                link.click();
+            });
+        }
+    </script>
+</body>
+</html> 

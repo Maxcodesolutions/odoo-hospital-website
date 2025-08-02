@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="payment=*, geolocation=*, microphone=*, camera=*, fullscreen=*">
+    <title>Clinical Management System - Maxcode Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container">
+            <div class="announcement-content">
+                <a href="mailto:info@maxcodesolutions.in" class="announcement-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@maxcodesolutions.in</span>
+                </a>
+                <div class="announcement-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+919560455637" style="color: inherit; text-decoration: none;">🇮🇳 +91 9560455637</a>
+                    <a href="tel:+971551120795" style="color: inherit; text-decoration: none;">🇦🇪 +971 551120795</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/Logo/logo.png" alt="Maxcode Solutions Logo" class="logo-image">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="about-us.html" class="nav-link">About Us</a></li>
+                <li class="nav-dropdown">
+                    <a href="index.html#modules" class="nav-link">Modules <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="clinical-management.html">Clinical Management</a></li>
+                        <li><a href="pharmacy-management.html">Pharmacy Management</a></li>
+                        <li><a href="laboratory-management.html">Laboratory Management</a></li>
+                        <li><a href="radiology-management.html">Radiology Management</a></li>
+                        <li><a href="inventory-management.html">Inventory Management</a></li>
+                        <li><a href="financial-management.html">Financial Management</a></li>
+                        <li><a href="human-resources.html">Human Resources</a></li>
+                        <li><a href="patient-portal.html">Patient Portal</a></li>
+                    </ul>
+                </li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Clinical Management Hero Section -->
+    <section class="clinical-hero">
+        <div class="container">
+            <div class="clinical-hero-content">
+                <h1>Clinical Management System</h1>
+                <p>Comprehensive patient care management with integrated EMR, doctor management, invoicing, and commission tracking for modern healthcare facilities.</p>
+                <div class="clinical-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">10,000+</div>
+                        <div class="stat-label">Patients Managed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Doctors Onboarded</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">Uptime</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinical Management Overview -->
+    <section class="clinical-overview">
+        <div class="container">
+            <div class="overview-content">
+                <div class="overview-text">
+                    <h2>Complete Clinical Management Solution</h2>
+                    <p>Our Clinical Management System provides end-to-end patient care management with integrated modules for patient records, doctor management, electronic medical records (EMR), invoicing, and commission tracking. Designed for healthcare facilities of all sizes.</p>
+                    <div class="overview-features">
+                        <div class="feature-item">
+                            <i class="fas fa-user-injured"></i>
+                            <span>Comprehensive Patient Management</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-user-md"></i>
+                            <span>Advanced Doctor Management</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-file-medical"></i>
+                            <span>Electronic Medical Records (EMR)</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-receipt"></i>
+                            <span>Automated Invoicing System</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-percentage"></i>
+                            <span>Doctor Commission Tracking</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-hospital-user"></i>
+                        <h3>Clinical Management</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Management Section -->
+    <section class="patient-management">
+        <div class="container">
+            <div class="section-header">
+                <h2>Patient Management</h2>
+                <p>Comprehensive patient lifecycle management from registration to discharge</p>
+            </div>
+            <div class="management-grid">
+                <div class="management-card">
+                    <div class="card-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>Patient Registration</h3>
+                    <ul>
+                        <li>Quick patient registration with demographic details</li>
+                        <li>Insurance information management</li>
+                        <li>Emergency contact details</li>
+                        <li>Medical history tracking</li>
+                        <li>Allergy and medication alerts</li>
+                    </ul>
+                </div>
+                <div class="management-card">
+                    <div class="card-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Appointment Scheduling</h3>
+                    <ul>
+                        <li>Online appointment booking system</li>
+                        <li>Doctor availability management</li>
+                        <li>Automated appointment reminders</li>
+                        <li>Rescheduling and cancellation handling</li>
+                        <li>Waitlist management</li>
+                    </ul>
+                </div>
+                <div class="management-card">
+                    <div class="card-icon">
+                        <i class="fas fa-notes-medical"></i>
+                    </div>
+                    <h3>Medical Records</h3>
+                    <ul>
+                        <li>Comprehensive patient history</li>
+                        <li>Vital signs tracking</li>
+                        <li>Lab results integration</li>
+                        <li>Imaging reports management</li>
+                        <li>Medication history</li>
+                    </ul>
+                </div>
+                <div class="management-card">
+                    <div class="card-icon">
+                        <i class="fas fa-procedures"></i>
+                    </div>
+                    <h3>Treatment Plans</h3>
+                    <ul>
+                        <li>Customized treatment protocols</li>
+                        <li>Progress tracking</li>
+                        <li>Follow-up scheduling</li>
+                        <li>Outcome measurement</li>
+                        <li>Care coordination</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Management Section -->
+    <section class="doctor-management">
+        <div class="container">
+            <div class="section-header">
+                <h2>Doctor Management</h2>
+                <p>Efficient management of healthcare professionals and their schedules</p>
+            </div>
+            <div class="management-grid">
+                <div class="management-card">
+                    <div class="card-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Doctor Profiles</h3>
+                    <ul>
+                        <li>Comprehensive doctor profiles</li>
+                        <li>Specialization and expertise tracking</li>
+                        <li>License and certification management</li>
+                        <li>Performance metrics</li>
+                        <li>Availability schedules</li>
+                    </ul>
+                </div>
+                <div class="management-card">
+                    <div class="card-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Schedule Management</h3>
+                    <ul>
+                        <li>Flexible scheduling system</li>
+                        <li>Leave management</li>
+                        <li>On-call scheduling</li>
+                        <li>Emergency coverage</li>
+                        <li>Schedule optimization</li>
+                    </ul>
+                </div>
+                <div class="management-card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Performance Analytics</h3>
+                    <ul>
+                        <li>Patient satisfaction scores</li>
+                        <li>Treatment outcomes tracking</li>
+                        <li>Productivity metrics</li>
+                        <li>Quality indicators</li>
+                        <li>Continuing education tracking</li>
+                    </ul>
+                </div>
+                <div class="management-card">
+                    <div class="card-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Commission Management</h3>
+                    <ul>
+                        <li>Commission structure setup</li>
+                        <li>Revenue sharing tracking</li>
+                        <li>Performance-based incentives</li>
+                        <li>Automated commission calculation</li>
+                        <li>Payment processing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMR Section -->
+    <section class="emr-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Electronic Medical Records (EMR)</h2>
+                <p>Secure, comprehensive, and accessible patient medical records</p>
+            </div>
+            <div class="emr-features">
+                <div class="emr-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Secure & Compliant</h3>
+                        <p>HIPAA-compliant data security with role-based access control, audit trails, and encrypted data transmission.</p>
+                    </div>
+                </div>
+                <div class="emr-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Mobile Access</h3>
+                        <p>Access patient records on any device with responsive design and offline capabilities for critical situations.</p>
+                    </div>
+                </div>
+                <div class="emr-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Real-time Updates</h3>
+                        <p>Instant synchronization across all devices and departments with real-time notifications and alerts.</p>
+                    </div>
+                </div>
+                <div class="emr-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Analytics & Reporting</h3>
+                        <p>Advanced analytics for treatment outcomes, population health, and quality improvement initiatives.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Invoicing Section -->
+    <section class="invoicing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Patient Invoicing & Billing</h2>
+                <p>Automated billing system with insurance integration and payment processing</p>
+            </div>
+            <div class="invoicing-grid">
+                <div class="invoicing-card">
+                    <div class="card-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Automated Billing</h3>
+                    <ul>
+                        <li>Automatic invoice generation</li>
+                        <li>Insurance claim processing</li>
+                        <li>Multiple payment methods</li>
+                        <li>Payment plan management</li>
+                        <li>Late payment tracking</li>
+                    </ul>
+                </div>
+                <div class="invoicing-card">
+                    <div class="card-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Payment Processing</h3>
+                    <ul>
+                        <li>Secure payment gateway</li>
+                        <li>Multiple payment options</li>
+                        <li>Automated reconciliation</li>
+                        <li>Refund processing</li>
+                        <li>Payment history tracking</li>
+                    </ul>
+                </div>
+                <div class="invoicing-card">
+                    <div class="card-icon">
+                        <i class="fas fa-shield-check"></i>
+                    </div>
+                    <h3>Insurance Management</h3>
+                    <ul>
+                        <li>Insurance verification</li>
+                        <li>Claim submission automation</li>
+                        <li>Benefits verification</li>
+                        <li>Denial management</li>
+                        <li>Appeal processing</li>
+                    </ul>
+                </div>
+                <div class="invoicing-card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Financial Analytics</h3>
+                    <ul>
+                        <li>Revenue tracking</li>
+                        <li>Collection rate analysis</li>
+                        <li>AR aging reports</li>
+                        <li>Cost analysis</li>
+                        <li>Profitability metrics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commission Management Section -->
+    <section class="commission-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Doctor Commission Management</h2>
+                <p>Transparent and automated commission tracking for healthcare professionals</p>
+            </div>
+            <div class="commission-grid">
+                <div class="commission-card">
+                    <div class="card-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Commission Structure</h3>
+                    <ul>
+                        <li>Flexible commission rates</li>
+                        <li>Service-based calculations</li>
+                        <li>Performance incentives</li>
+                        <li>Revenue sharing models</li>
+                        <li>Custom commission rules</li>
+                    </ul>
+                </div>
+                <div class="commission-card">
+                    <div class="card-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Automated Calculations</h3>
+                    <ul>
+                        <li>Real-time commission tracking</li>
+                        <li>Automatic calculation</li>
+                        <li>Revenue attribution</li>
+                        <li>Performance metrics</li>
+                        <li>Commission reports</li>
+                    </ul>
+                </div>
+                <div class="commission-card">
+                    <div class="card-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Payment Processing</h3>
+                    <ul>
+                        <li>Automated payment generation</li>
+                        <li>Multiple payment methods</li>
+                        <li>Tax calculation</li>
+                        <li>Payment scheduling</li>
+                        <li>Payment history</li>
+                    </ul>
+                </div>
+                <div class="commission-card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Performance Analytics</h3>
+                    <ul>
+                        <li>Revenue performance tracking</li>
+                        <li>Commission trends</li>
+                        <li>Productivity analysis</li>
+                        <li>Benchmark comparisons</li>
+                        <li>Goal setting and tracking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="clinical-benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Benefits of Clinical Management System</h2>
+                <p>Transform your healthcare facility with our comprehensive clinical management solution</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Time Efficiency</h3>
+                    <p>Reduce administrative tasks by 60% with automated processes and streamlined workflows.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Revenue Optimization</h3>
+                    <p>Increase revenue by 25% through better billing accuracy and faster payment processing.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Patient Satisfaction</h3>
+                    <p>Improve patient experience with faster service delivery and better communication.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Compliance & Security</h3>
+                    <p>Ensure HIPAA compliance and data security with advanced encryption and audit trails.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Staff Productivity</h3>
+                    <p>Empower staff with intuitive tools and reduce manual data entry by 80%.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Data Intelligence</h3>
+                    <p>Leverage analytics for better decision-making and improved patient outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="clinical-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Clinical Management?</h2>
+                <p>Join hundreds of healthcare facilities that have revolutionized their clinical operations with our comprehensive management system.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">
+                        <i class="fas fa-phone"></i>
+                        Request Demo
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Get Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/Logo/logo.png" alt="Maxcode Solutions Logo" class="logo-image">
+                    </div>
+                    <p>Empowering healthcare facilities with innovative Odoo-based hospital management solutions for better patient care and operational efficiency.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Modules</h4>
+                    <ul>
+                        <li><a href="clinical-management.html">Clinical Management</a></li>
+                        <li><a href="pharmacy-management.html">Pharmacy Management</a></li>
+                        <li><a href="laboratory-management.html">Laboratory Management</a></li>
+                        <li><a href="radiology-management.html">Radiology Management</a></li>
+                        <li><a href="inventory-management.html">Inventory Management</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="documentation.html">Documentation</a></li>
+                        <li><a href="training.html">Training</a></li>
+                        <li><a href="support.html">Support Portal</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Updates</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Maxcode Solutions. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-conditions.html">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="payment=*, geolocation=*, microphone=*, camera=*, fullscreen=*">
+
+    <title>Maxcode Solution - Hospital Management Software</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container">
+            <div class="announcement-content">
+                                        <a href="mailto:info@maxcodesolutions.in" class="announcement-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@maxcodesolutions.in</span>
+                        </a>
+                        <div class="announcement-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+919560455637" style="color: inherit; text-decoration: none;">🇮🇳 +91 9560455637</a>
+                            <a href="tel:+971551120795" style="color: inherit; text-decoration: none;">🇦🇪 +971 551120795</a>
+                        </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/Logo/logo.png" alt="Maxcode Solutions Logo" class="logo-image">
+                
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="about-us.html" class="nav-link">About Us</a></li>
+                <li class="nav-dropdown">
+                    <a href="#modules" class="nav-link">Modules <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="clinical-management.html">Clinical Management</a></li>
+                        <li><a href="hospital-operations.html">Hospital Operations</a></li>
+                        <li><a href="pharmacy-management.html">Pharmacy Management</a></li>
+                        <li><a href="insurance-management.html">Insurance Management</a></li>
+                        <li><a href="surgery-management.html">Surgery Management</a></li>
+                        <li><a href="treatment-management.html">Treatment Management</a></li>
+                        <li><a href="laboratory-management.html">Laboratory Management</a></li>
+                        <li><a href="emergency-services.html">Emergency Services</a></li>
+                        <li><a href="doctors-management.html">Doctors Management</a></li>
+                        <li><a href="commission-management.html">Commission Management</a></li>
+                        <li><a href="ipd-opd-billing-management.html">IPD and OPD Billing Management</a></li>
+                        <li><a href="department-management.html">Department Management</a></li>
+                        <li><a href="radiology-management.html">Radiology Management</a></li>
+                        <li><a href="purchase-inventory-management.html">Purchase and Inventory Management</a></li>
+                    </ul>
+                </li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Transform Your Hospital with Hospital Management System</h1>
+                <p>Streamline operations, enhance patient care, and improve efficiency with our comprehensive hospital management solution built on Odoo.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" type="button" id="heroCalendlyBtn">Get Started</button>
+                    <button class="btn btn-secondary">Watch Demo</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>Patient Management</h3>
+                    <p>Complete patient records and care tracking</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Banner Section -->
+    <section class="banner-section">
+        <div class="container">
+            <div class="banner-carousel">
+                <div class="banner-slide active">
+                    <div class="banner-content">
+                        <div class="banner-text">
+                            <h2>Hospital Dashboard Overview</h2>
+                            <p>Real-time insights into patient care, bed occupancy, and operational metrics</p>
+                            <button class="btn btn-primary">View Demo</button>
+                        </div>
+                        <div class="banner-image">
+                            <img src="assets/banners/odoo-dashboard-1.jpg" alt="Odoo Hospital Dashboard" />
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-slide">
+                    <div class="banner-content">
+                        <div class="banner-text">
+                            <h2>Patient Management Interface</h2>
+                            <p>Comprehensive patient records, appointments, and treatment tracking system</p>
+                            <button class="btn btn-primary">Learn More</button>
+                        </div>
+                        <div class="banner-image">
+                            <img src="assets/banners/odoo-dashboard-2.jpg" alt="Odoo Patient Management" />
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-slide">
+                    <div class="banner-content">
+                        <div class="banner-text">
+                            <h2>Analytics & Reporting</h2>
+                            <p>Advanced analytics dashboard with customizable reports and performance metrics</p>
+                            <button class="btn btn-primary">Explore Features</button>
+                        </div>
+                        <div class="banner-image">
+                            <img src="assets/banners/odoo-dashboard-3.jpg" alt="Odoo Analytics Dashboard" />
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-controls">
+                    <button class="banner-dot active" data-slide="0"></button>
+                    <button class="banner-dot" data-slide="1"></button>
+                    <button class="banner-dot" data-slide="2"></button>
+                </div>
+                <button class="banner-nav banner-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="banner-nav banner-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="animate-on-scroll">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card stagger-animation">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-injured"></i>
+                    </div>
+                    <h3>Patient Management</h3>
+                    <p>Comprehensive patient registration, medical history, and appointment scheduling with integrated billing.</p>
+                </div>
+                <div class="feature-card stagger-animation">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Appointment Scheduling</h3>
+                    <p>Smart scheduling system with automated reminders, conflict detection, and resource optimization.</p>
+                </div>
+                <div class="feature-card stagger-animation">
+                    <div class="feature-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>Pharmacy Management</h3>
+                    <p>Inventory tracking, prescription management, and automated reorder notifications for medications.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-medical"></i>
+                    </div>
+                    <h3>Electronic Health Records</h3>
+                    <p>Secure, HIPAA-compliant digital patient records with easy access and comprehensive documentation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Analytics & Reporting</h3>
+                    <p>Real-time dashboards, performance metrics, and customizable reports for data-driven decisions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Billing & Insurance</h3>
+                    <p>Automated billing, insurance claim processing, and payment tracking with multiple payment options.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section id="modules" class="modules">
+        <div class="container">
+            <h2 class="animate-on-scroll">Hospital Management Modules</h2>
+            <div class="modules-grid">
+                <a href="clinical-management.html" class="module-card-link"><div class="module-card">
+                    <div class="module-header">
+                        <i class="fas fa-user-md"></i>
+                        <h3>Clinical Management</h3>
+                    </div>
+                    <ul>
+                        <li>Patient registration & demographics</li>
+                        <li>Medical history & allergies</li>
+                        <li>Vital signs tracking</li>
+                        <li>Treatment plans</li>
+                        <li>Progress notes</li>
+                    </ul>
+                </div></a>
+                <a href="hospital-operations.html" class="module-card-link"><div class="module-card">
+                    <div class="module-header">
+                        <i class="fas fa-hospital"></i>
+                        <h3>Hospital Operations</h3>
+                    </div>
+                    <ul>
+                        <li>Bed management</li>
+                        <li>Room scheduling</li>
+                        <li>Staff scheduling</li>
+                        <li>Equipment tracking</li>
+                        <li>Maintenance requests</li>
+                    </ul>
+                </div></a>
+                <a href="pharmacy-management.html" class="module-card-link"><div class="module-card">
+                    <div class="module-header">
+                        <i class="fas fa-pills"></i>
+                        <h3>Pharmacy Management</h3>
+                    </div>
+                    <ul>
+                        <li>Medicine inventory & stock control</li>
+                        <li>Prescription management</li>
+                        <li>Automated reorder alerts</li>
+                        <li>Expiry tracking</li>
+                        <li>Supplier & purchase management</li>
+                    </ul>
+                </div></a>
+                <a href="insurance-management.html" class="module-card-link"><div class="module-card">
+                    <div class="module-header">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                        <h3>Insurance Management</h3>
+                    </div>
+                    <ul>
+                        <li>Insurance policy management</li>
+                        <li>Claim processing & tracking</li>
+                        <li>Pre-authorization workflow</li>
+                        <li>Integration with billing</li>
+                        <li>Patient insurance records</li>
+                    </ul>
+                </div></a>
+                <a href="surgery-management.html" class="module-card-link"><div class="module-card">
+                    <div class="module-header">
+                        <i class="fas fa-user-injured"></i>
+                        <h3>Surgery Management</h3>
+                    </div>
+                    <ul>
+                        <li>Surgery scheduling & calendar</li>
+                        <li>Pre-op & post-op documentation</li>
+                        <li>Surgical team assignment</li>
+                        <li>OT inventory & equipment tracking</li>
+                        <li>Outcome & complication records</li>
+                    </ul>
+                </div></a>
+                <a href="treatment-management.html" class="module-card-link"><div class="module-card">
+                    <div class="module-header">
+                        <i class="fas fa-stethoscope"></i>
+                        <h3>Treatment Management</h3>
+                    </div>
+                    <ul>
+                        <li>Treatment plan creation</li>
+                        <li>Medication & procedure tracking</li>
+                        <li>Progress monitoring</li>
+                        <li>Patient consent management</li>
+                        <li>Outcome analysis</li>
+                    </ul>
+                </div></a>
+                <a href="laboratory-management.html" class="module-card-link"><div class="module-card">
+                    <div class="module-header">
+                        <i class="fas fa-microscope"></i>
+                        <h3>Laboratory Management</h3>
+                    </div>
+                    <ul>
+                        <li>Test ordering & scheduling</li>
+                        <li>Sample collection & tracking</li>
+                        <li>Automated result entry</li>
+                        <li>Quality control & compliance</li>
+                        <li>Lab billing integration</li>
+                    </ul>
+                </div></a>
+                <a href="emergency-services.html" class="module-card-link"><div class="module-card">
+                    <div class="module-header">
+                        <i class="fas fa-ambulance"></i>
+                        <h3>Emergency Services</h3>
+                    </div>
+                    <ul>
+                        <li>Emergency triage</li>
+                        <li>Ambulance dispatch</li>
+                        <li>Critical care tracking</li>
+                        <li>Emergency protocols</li>
+                        <li>Disaster management</li>
+                    </ul>
+                </div></a>
+                <a href="doctors-management.html" class="module-card-link"><div class="module-card">
+                    <div class="module-header">
+                        <i class="fas fa-user-md"></i>
+                        <h3>Doctors Management</h3>
+                    </div>
+                    <ul>
+                        <li>Doctor profiles & specialization</li>
+                        <li>Scheduling & availability</li>
+                        <li>Consultation history</li>
+                        <li>Performance analytics</li>
+                        <li>Leave & attendance tracking</li>
+                    </ul>
+                </div></a>
+                <a href="commission-management.html" class="module-card-link"><div class="module-card">
+                    <div class="module-header">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <h3>Commission Management</h3>
+                    </div>
+                    <ul>
+                        <li>Doctor commission setup</li>
+                        <li>Automated commission calculation</li>
+                        <li>Multi-department commission rules</li>
+                        <li>Commission reports & analytics</li>
+                        <li>Payout tracking</li>
+                    </ul>
+                </div></a>
+                <a href="ipd-opd-billing-management.html" class="module-card-link"><div class="module-card">
+                    <div class="module-header">
+                        <i class="fas fa-file-invoice"></i>
+                        <h3>IPD and OPD Billing Management</h3>
+                    </div>
+                    <ul>
+                        <li>Inpatient & outpatient billing</li>
+                        <li>Package & service billing</li>
+                        <li>Advance payment & refunds</li>
+                        <li>Insurance & third-party billing</li>
+                        <li>Detailed billing reports</li>
+                    </ul>
+                </div></a>
+                <a href="department-management.html" class="module-card-link"><div class="module-card">
+                    <div class="module-header">
+                        <i class="fas fa-building"></i>
+                        <h3>Department Management</h3>
+                    </div>
+                    <ul>
+                        <li>Department creation & categorization</li>
+                        <li>Staff assignment</li>
+                        <li>Resource allocation</li>
+                        <li>Departmental performance tracking</li>
+                        <li>Inter-department communication</li>
+                    </ul>
+                </div></a>
+                <a href="radiology-management.html" class="module-card-link"><div class="module-card">
+                    <div class="module-header">
+                        <i class="fas fa-x-ray"></i>
+                        <h3>Radiology Management</h3>
+                    </div>
+                    <ul>
+                        <li>Radiology test ordering</li>
+                        <li>Image & report management</li>
+                        <li>Integration with PACS</li>
+                        <li>Result notifications</li>
+                        <li>Billing integration</li>
+                    </ul>
+                </div></a>
+                <a href="purchase-inventory-management.html" class="module-card-link"><div class="module-card">
+                    <div class="module-header">
+                        <i class="fas fa-warehouse"></i>
+                        <h3>Purchase and Inventory Management</h3>
+                    </div>
+                    <ul>
+                        <li>Supplier management</li>
+                        <li>Purchase order processing</li>
+                        <li>Inventory tracking & alerts</li>
+                        <li>Stock valuation & audit</li>
+                        <li>Expiry & batch management</li>
+                    </ul>
+                </div></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <h2 class="animate-on-scroll">Why Choose Maxcode Solutions Hospital Management System</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item stagger-animation">
+                    <div class="benefit-number">01</div>
+                    <h3>Improved Efficiency</h3>
+                    <p>Reduce administrative workload by 60% with automated processes and streamlined workflows.</p>
+                </div>
+                <div class="benefit-item stagger-animation">
+                    <div class="benefit-number">02</div>
+                    <h3>Enhanced Patient Care</h3>
+                    <p>Provide better care with quick access to patient information and integrated care coordination.</p>
+                </div>
+                <div class="benefit-item stagger-animation">
+                    <div class="benefit-number">03</div>
+                    <h3>Cost Reduction</h3>
+                    <p>Lower operational costs through better resource management and reduced paperwork.</p>
+                </div>
+                <div class="benefit-item stagger-animation">
+                    <div class="benefit-number">04</div>
+                    <h3>Compliance & Security</h3>
+                    <p>Meet healthcare regulations with built-in compliance features and robust security measures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Clients Section -->
+    <section class="clients-section">
+        <div class="container">
+            <h2 class="clients-label">Our Clients</h2>
+            <div class="clients-carousel">
+                <div class="clients-track">
+                    <img src="assets/medanta-logo.png" alt="Medanta" title="Medanta - The Medicity">
+                    <img src="assets/fortis-logo.png" alt="Fortis" title="Fortis Healthcare">
+                    <img src="assets/artemis-logo.png" alt="Artemis" title="Artemis Hospital">
+                    <img src="assets/max-logo.png" alt="Max" title="Max Healthcare">
+                    <img src="assets/apollo-logo.png" alt="Apollo" title="Apollo Hospitals">
+                    <img src="assets/paras-logo.png" alt="Paras" title="Paras Hospitals">
+                    <img src="assets/blk-logo.png" alt="BLK" title="BLK-Max Super Speciality Hospital">
+                    <img src="assets/columbia-asia-logo.png" alt="Columbia Asia" title="Columbia Asia Hospital">
+                    <img src="assets/medanta-logo.png" alt="Medanta" title="Medanta - The Medicity">
+                    <img src="assets/fortis-logo.png" alt="Fortis" title="Fortis Healthcare">
+                    <img src="assets/artemis-logo.png" alt="Artemis" title="Artemis Hospital">
+                    <img src="assets/max-logo.png" alt="Max" title="Max Healthcare">
+                    <img src="assets/apollo-logo.png" alt="Apollo" title="Apollo Hospitals">
+                    <img src="assets/paras-logo.png" alt="Paras" title="Paras Hospitals">
+                    <img src="assets/blk-logo.png" alt="BLK" title="BLK-Max Super Speciality Hospital">
+                    <img src="assets/columbia-asia-logo.png" alt="Columbia Asia" title="Columbia Asia Hospital">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Free Consultation Section -->
+    <section class="consultation-section">
+        <div class="container">
+            <div class="consultation-content">
+                <div class="consultation-text">
+                    <h2>Ready to Transform Your Hospital?</h2>
+                    <p>Schedule a free consultation with our healthcare technology experts and discover how our Hospital Management System can revolutionize your operations.</p>
+                    <div class="consultation-benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-clock"></i>
+                            <span>30-minute free consultation</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Custom solution assessment</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-calculator"></i>
+                            <span>ROI analysis & cost estimation</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-roadmap"></i>
+                            <span>Implementation roadmap</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="consultation-cta">
+                    <button class="btn btn-primary" onclick="openCalendlyPopup();">
+                        <i class="fas fa-calendar-alt"></i>
+                        Schedule Free Consultation
+                    </button>
+                    <p class="consultation-note">No commitment required • Expert guidance • Custom solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/Logo/logo.png" alt="Maxcode Solutions Logo" class="logo-image">
+                        
+                    </div>
+                    <p>Empowering healthcare providers with innovative management solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#modules">Modules</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="documentation.html">Documentation</a></li>
+                        <li><a href="training.html">Training</a></li>
+                        <li><a href="support.html">Support Portal</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Policy</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                        <li><a href="do-not-sell.html">Do Not Sell My Personal Information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Maxcode Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Call-to-Action Widget -->
+    <div class="floating-cta">
+        <div class="cta-toggle">
+            <i class="fas fa-comments"></i>
+        </div>
+        <div class="cta-options">
+            <a href="tel:+919560455637" class="cta-option phone">
+                <i class="fas fa-phone"></i>
+                <span>Call Us</span>
+            </a>
+            <a href="https://wa.me/919560455637" target="_blank" class="cta-option whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="mailto:info@maxcodesolutions.in" class="cta-option email">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+            <a href="#" class="cta-option calendar" id="floatingCalendlyBtn">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Schedule</span>
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+// Simple Calendly integration - opens in new window
+function openCalendlyPopup() {
+    window.open('https://calendly.com/ishkirat/30min', '_blank', 'width=600,height=700');
+}
+
+// Add click handlers when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    // Hero button
+    const heroBtn = document.getElementById('heroCalendlyBtn');
+    if (heroBtn) {
+        heroBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            openCalendlyPopup();
+        });
+    }
+    
+    // Floating CTA button
+    const floatingBtn = document.getElementById('floatingCalendlyBtn');
+    if (floatingBtn) {
+        floatingBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            openCalendlyPopup();
+        });
+    }
+});
+
+// Restore scroll if needed
+window.addEventListener('hashchange', function() {
+    document.body.style.overflow = '';
+});
+
+window.addEventListener('popstate', function() {
+    document.body.style.overflow = '';
+});
+
+
+</script>
+</body>
+</html> 
