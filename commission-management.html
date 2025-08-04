@@ -13,14 +13,24 @@
     <div class="announcement-bar">
         <div class="container">
             <div class="announcement-content">
-                <a href="mailto:info@maxcodesolutions.in" class="announcement-item">
+                <a href="mailto:info@maxcodesolutions.in" class="announcement-item desktop-email" title="Email us">
                     <i class="fas fa-envelope"></i>
                     <span>info@maxcodesolutions.in</span>
                 </a>
-                <div class="announcement-item">
+                <div class="announcement-item phone-dropdown" title="Call us">
                     <i class="fas fa-phone"></i>
-                    <a href="tel:+919560455637" style="color: inherit; text-decoration: none;">🇮🇳 +91 9560455637</a>
-                    <a href="tel:+971551120795" style="color: inherit; text-decoration: none;">🇦🇪 +971 551120795</a>
+                    <a href="tel:+919560455637" class="desktop-phone">🇮🇳 +91 9560455637</a>
+                    <i class="fas fa-chevron-down dropdown-arrow mobile-only"></i>
+                    <div class="phone-dropdown-menu">
+                        <a href="tel:+919560455637" class="phone-option">
+                            <span class="flag">🇮🇳</span>
+                            <span class="number">+91 9560455637</span>
+                        </a>
+                        <a href="tel:+971551120795" class="phone-option">
+                            <span class="flag">🇦🇪</span>
+                            <span class="number">+971 551120795</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -37,7 +47,7 @@
                 <ul class="nav-menu">
                     <li><a href="index.html#home" class="nav-link">Home</a></li>
                     <li><a href="about-us.html" class="nav-link">About Us</a></li>
-                    <li><a href="index.html#features" class="nav-link">Features</a></li>
+
                     <li class="nav-dropdown">
                         <a href="index.html#modules" class="nav-link">Modules <i class="fas fa-caret-down"></i></a>
                         <ul class="dropdown-menu">
@@ -57,7 +67,7 @@
                             <li><a href="purchase-inventory-management.html">Purchase and Inventory Management</a></li>
                         </ul>
                     </li>
-                    <li><a href="index.html#benefits" class="nav-link">Benefits</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
                     <li><a href="blog.html" class="nav-link">Blog</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
@@ -77,8 +87,8 @@
                 <div class="module-icon">
                     <i class="fas fa-percentage"></i>
                 </div>
-                <h1 class="typewriter">Commission Management</h1>
-                <p class="module-subtitle slide-in-up delay-200">Comprehensive commission tracking and revenue sharing management system</p>
+                <h1>Commission Management</h1>
+                <p class="module-subtitle">Comprehensive commission tracking and revenue sharing management system</p>
             </div>
 
             <div class="module-content">
@@ -199,7 +209,7 @@
                     <ul>
                         <li><a href="index.html#home">Home</a></li>
                         <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="index.html#features">Features</a></li>
+
                         <li><a href="index.html#modules">Modules</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>

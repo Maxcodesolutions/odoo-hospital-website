@@ -9,7 +9,7 @@
 .announcement-bar {
     background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
     color: white;
-    padding: 8px 0;
+    padding: 6px 0;
     font-size: 0.85rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     position: fixed;
@@ -22,6 +22,9 @@
     visibility: visible;
     opacity: 1;
     transition: all 0.3s ease;
+    height: 40px;
+    display: flex;
+    align-items: center;
 }
 
 .announcement-content {
@@ -29,20 +32,51 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    gap: 40px;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Desktop styles - show text */
+.desktop-email span,
+.desktop-phone {
+    display: inline;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.desktop-phone:hover {
+    color: #ffffff;
+}
+
+.mobile-only {
+    display: none;
+}
+
+/* Hide dropdown on desktop */
+@media (min-width: 769px) {
+    .phone-dropdown-menu {
+        display: none !important;
+    }
+    
+    .dropdown-arrow {
+        display: none !important;
+    }
 }
 
 .announcement-item {
     display: flex;
     align-items: center;
     gap: 8px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     transition: all 0.3s ease;
-    padding: 4px 8px;
+    padding: 8px 12px;
     border-radius: 6px;
     border: 1px solid transparent;
     text-decoration: none;
     color: inherit;
+    position: relative;
+    cursor: pointer;
 }
 
 .announcement-item a {
@@ -78,6 +112,109 @@
     color: #ffffff;
 }
 
+/* Phone Dropdown Styles */
+.phone-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.dropdown-arrow {
+    font-size: 0.7rem;
+    opacity: 0.7;
+    transition: transform 0.3s ease;
+}
+
+.phone-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 0.5rem 0;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1002;
+    margin-top: 8px;
+}
+
+.phone-dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Ensure dropdown works on mobile */
+@media (max-width: 768px) {
+    .phone-dropdown {
+        cursor: pointer;
+        position: relative;
+        z-index: 1003;
+    }
+    
+    .phone-dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        padding: 0.5rem 0;
+        min-width: 200px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 10000;
+        border: 1px solid #e5e7eb;
+        color: #333333;
+        margin-top: 10px;
+    }
+    
+    .phone-dropdown-menu.show {
+        opacity: 1;
+        visibility: visible;
+        display: block;
+    }
+}
+
+.dropdown-arrow.rotated {
+    transform: rotate(180deg);
+}
+
+.phone-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.75rem 1rem;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.phone-option:last-child {
+    border-bottom: none;
+}
+
+.phone-option:hover {
+    background-color: #f8f9fa;
+    color: #2563eb;
+}
+
+.phone-option .flag {
+    font-size: 1.2rem;
+}
+
+.phone-option .number {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
 /* Announcement bar animation */
 .announcement-bar {
     animation: slideDown 0.5s ease-out;
@@ -96,18 +233,39 @@
 
 @media (max-width: 768px) {
     .announcement-content {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
+        flex-direction: row;
+        gap: 15px;
+        justify-content: space-between;
     }
     
     .announcement-item {
         justify-content: center;
-        font-size: 0.8rem;
+        font-size: 1rem;
+        padding: 6px 10px;
     }
     
-    .announcement-item span {
-        font-size: 0.75rem;
+    /* Mobile styles - hide text, show icons only */
+    .desktop-email span,
+    .desktop-phone {
+        display: none;
+    }
+    
+    .mobile-only {
+        display: inline;
+    }
+    
+    .phone-dropdown-menu {
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 180px;
+    }
+    
+    .phone-option {
+        padding: 0.5rem 0.75rem;
+    }
+    
+    .phone-option .number {
+        font-size: 0.8rem;
     }
 }
 
@@ -574,6 +732,7 @@ body {
 
 .hero-buttons {
     display: flex;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -1367,6 +1526,11 @@ body {
     border: 1px solid #e2e8f0;
     border-radius: 12px;
     transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .feature-item:hover {
@@ -1378,17 +1542,23 @@ body {
     font-size: 2rem;
     color: #2563eb;
     margin-bottom: 1rem;
+    display: block;
+    text-align: center;
 }
 
 .feature-item h3 {
     color: #1e293b;
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
+    text-align: center;
+    width: 100%;
 }
 
 .feature-item p {
     color: #64748b;
     line-height: 1.6;
+    text-align: center;
+    width: 100%;
 }
 
 .module-benefits {
@@ -1506,25 +1676,115 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .nav-logo {
+        font-size: 1.2rem;
+    }
+    
+    .logo-image {
+        height: 30px;
+        width: auto;
+    }
+    
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 80px; /* Adjusted for navbar height */
+        top: 72px; /* Adjusted to account for announcement bar (40px) + navbar height (32px) */
+        display: flex;
         flex-direction: column;
         background-color: white;
         width: 100%;
         text-align: center;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        padding: 2rem 0;
+        padding: 0; /* Remove padding to eliminate gaps */
+        height: calc(100vh - 72px); /* Full height minus header */
+        overflow-y: auto;
+        z-index: 1002; /* Increased to be above navbar and announcement bar */
+        font-family: 'Inter', sans-serif; /* Consistent font */
+        border-top: none; /* Remove any top border */
+        margin-top: 0; /* Remove any margin */
+        top: 72px !important; /* Force exact positioning */
     }
 
     .nav-menu.active {
-        left: 0;
+        left: 0 !important;
+        transform: translateX(0) !important;
+        top: 72px !important; /* Ensure it starts exactly below navbar */
+    }
+    
+    /* More specific rule to ensure it overrides */
+    @media (max-width: 768px) {
+        .nav-menu.active {
+            left: 0 !important;
+            transform: translateX(0) !important;
+            top: 72px !important; /* Ensure it starts exactly below navbar */
+        }
+    }
+
+    .nav-menu li {
+        margin: 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-menu .nav-link {
+        display: block;
+        padding: 1.5rem 2rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #333;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-family: 'Inter', sans-serif;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .nav-menu .nav-link:hover {
+        background-color: #f8f9fa;
+        color: #2563eb;
+        transform: translateX(10px);
     }
 
     .nav-toggle {
         display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 5px;
+        transition: all 0.3s ease;
+    }
+    
+    /* Toggle button animation when menu is open */
+    .nav-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* Prevent body scroll when menu is open */
+    body.menu-open {
+        overflow: hidden;
+    }
+    
+    /* Remove backdrop overlay - no translucent background */
+    
+    /* Ensure announcement bar stays on top */
+    .announcement-bar {
+        z-index: 1001;
+    }
+    
+    /* Ensure navbar stays above mobile menu */
+    .navbar {
+        z-index: 1000;
     }
 
     .hero-container {
@@ -1558,61 +1818,109 @@ body {
 
     /* Banner responsive styles */
     .banner-carousel {
-        height: 400px;
+        height: auto;
+        min-height: 500px;
         margin: 0 1rem;
+        border-radius: 15px;
     }
 
     .banner-content {
         flex-direction: column;
-        padding: 2rem;
+        padding: 2rem 1rem;
         text-align: center;
+        height: auto;
+        min-height: 500px;
     }
 
     .banner-text {
         padding-right: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
+        flex: 1;
     }
 
     .banner-text h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
     }
 
     .banner-text p {
         font-size: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .banner-image {
         flex: none;
         height: auto;
-        max-height: 200px;
+        max-height: 300px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
     }
 
-    .banner-nav {
-        width: 40px;
-        height: 40px;
-    }
-
-    .banner-prev {
-        left: 1rem;
-    }
-
-    .banner-next {
-        right: 1rem;
+    .banner-image img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        border-radius: 8px;
     }
 }
 
 @media (max-width: 480px) {
+    .nav-logo {
+        font-size: 1rem;
+    }
+    
+    .logo-image {
+        height: 25px;
+        width: auto;
+    }
+    
     .hero-content h1 {
         font-size: 2rem;
     }
-
+    
     .hero-content p {
         font-size: 1rem;
     }
-
+    
     .btn {
         padding: 10px 20px;
         font-size: 0.9rem;
+    }
+
+    /* Banner mobile optimization */
+    .banner-carousel {
+        margin: 0 0.5rem;
+        min-height: 450px;
+    }
+
+    .banner-content {
+        padding: 1.5rem 0.5rem;
+        min-height: 450px;
+    }
+
+    .banner-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .banner-text p {
+        font-size: 0.9rem;
+    }
+
+    .banner-image {
+        max-height: 280px;
+        padding: 0.5rem;
+    }
+
+    .banner-controls {
+        bottom: 1rem;
+    }
+
+    .banner-dot {
+        width: 10px;
+        height: 10px;
     }
 } 
 
@@ -1664,6 +1972,67 @@ body {
         width: 80px;
         height: 80px;
         font-size: 2rem;
+    }
+
+    .module-content {
+        padding: 1rem;
+    }
+
+    .module-description h2 {
+        font-size: 1.5rem;
+    }
+
+    .module-description p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .module-features-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .feature-item {
+        padding: 1rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .feature-item i {
+        display: block;
+        margin: 0 auto 1rem auto;
+        text-align: center;
+    }
+
+    .feature-item h3 {
+        font-size: 1.1rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .feature-item p {
+        font-size: 0.85rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .module-benefits h2 {
+        font-size: 1.5rem;
+    }
+
+    .module-benefits li {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .module-cta h2 {
+        font-size: 1.5rem;
+    }
+
+    .module-cta p {
+        font-size: 0.9rem;
     }
 } 
 
@@ -1740,14 +2109,44 @@ body {
         min-width: 100%;
         box-shadow: none;
         border-radius: 0;
-        background: #fff;
+        background: #f8f9fa;
         padding: 0;
-        display: block !important;
+        display: none;
         grid-template-columns: 1fr;
+        margin-top: 0; /* Remove margin to eliminate gaps */
     }
+    
+    .nav-dropdown.active .dropdown-menu {
+        display: block;
+    }
+    
     .dropdown-menu li a {
-        padding: 1em 2em;
-        font-size: 1rem;
+        padding: 1rem 3rem;
+        font-size: 0.9rem;
+        color: #666;
+        border-bottom: 1px solid #e9ecef;
+        font-family: 'Inter', sans-serif;
+    }
+    
+    .dropdown-menu li a:hover {
+        background-color: #e9ecef;
+        color: #2563eb;
+    }
+    
+    .nav-dropdown > .nav-link {
+        position: relative;
+    }
+    
+    .nav-dropdown > .nav-link::after {
+        content: '\f107';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        margin-left: 0.5rem;
+        transition: transform 0.3s ease;
+    }
+    
+    .nav-dropdown.active > .nav-link::after {
+        transform: rotate(180deg);
     }
 } 
 
@@ -2432,8 +2831,31 @@ body {
 }
 
 .cta-toggle {
+    width: 60px;
+    height: 60px;
+    background: #2563eb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    transition: all 0.3s ease;
     margin-bottom: 0;
     margin-top: 10px;
+    z-index: 1001;
+}
+
+.cta-toggle:hover {
+    background: #1d4ed8;
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+    transform: scale(1.1);
+}
+
+.cta-toggle i {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .cta-options {
@@ -2475,7 +2897,12 @@ body {
         right: 10px;
     }
     .cta-toggle {
+        width: 70px;
+        height: 70px;
         margin-top: 8px;
+    }
+    .cta-toggle i {
+        font-size: 1.8rem;
     }
     .cta-options {
         gap: 8px;
@@ -2929,9 +3356,12 @@ body {
     }
     
     .cta-toggle {
-        width: 50px;
-        height: 50px;
-        font-size: 1.2rem;
+        width: 65px;
+        height: 65px;
+    }
+    
+    .cta-toggle i {
+        font-size: 1.6rem;
     }
     
     .cta-option {
@@ -2968,9 +3398,12 @@ body {
     }
     
     .cta-toggle {
-        width: 45px;
-        height: 45px;
-        font-size: 1rem;
+        width: 60px;
+        height: 60px;
+    }
+    
+    .cta-toggle i {
+        font-size: 1.4rem;
     }
     
     .cta-option {
@@ -4049,6 +4482,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
+    align-items: center;
 }
 
 .contact .contact-item:hover {
@@ -4063,7 +4497,10 @@ body {
     margin-right: 1rem;
     min-width: 1.5rem;
     text-align: center;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 .contact .contact-item .contact-icon {
@@ -4075,6 +4512,10 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     filter: drop-shadow(0 1px 2px rgba(37, 99, 235, 0.2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 /* Fallback icons if Font Awesome fails to load */
@@ -4277,10 +4718,17 @@ body {
     .contact .contact-item {
         flex-direction: column;
         text-align: center;
+        align-items: center;
     }
     
-    .contact .contact-item i {
+    .contact .contact-item i,
+    .contact .contact-item .contact-icon {
         margin: 0 auto 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        justify-content: center;
     }
 }
 
@@ -6402,14 +6850,27 @@ body {
 
 .overview-features .feature-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 15px;
-    color: #1e293b;
+    color: #1e293b !important;
 }
 
 .overview-features .feature-item i {
     color: #667eea;
     font-size: 1.2rem;
+    min-width: 1.2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.overview-features .feature-item span {
+    color: #1e293b !important;
+    line-height: 1.5;
+    padding-top: 2px;
 }
 
 .patient-management,

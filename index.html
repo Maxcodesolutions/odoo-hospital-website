@@ -18,15 +18,25 @@
     <div class="announcement-bar">
         <div class="container">
             <div class="announcement-content">
-                                        <a href="mailto:info@maxcodesolutions.in" class="announcement-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>info@maxcodesolutions.in</span>
+                <a href="mailto:info@maxcodesolutions.in" class="announcement-item desktop-email" title="Email us">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@maxcodesolutions.in</span>
+                </a>
+                <div class="announcement-item phone-dropdown" title="Call us">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+919560455637" class="desktop-phone">🇮🇳 +91 9560455637</a>
+                    <i class="fas fa-chevron-down dropdown-arrow mobile-only"></i>
+                    <div class="phone-dropdown-menu">
+                        <a href="tel:+919560455637" class="phone-option">
+                            <span class="flag">🇮🇳</span>
+                            <span class="number">+91 9560455637</span>
                         </a>
-                        <div class="announcement-item">
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+919560455637" style="color: inherit; text-decoration: none;">🇮🇳 +91 9560455637</a>
-                            <a href="tel:+971551120795" style="color: inherit; text-decoration: none;">🇦🇪 +971 551120795</a>
-                        </div>
+                        <a href="tel:+971551120795" class="phone-option">
+                            <span class="flag">🇦🇪</span>
+                            <span class="number">+971 551120795</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -42,7 +52,7 @@
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="about-us.html" class="nav-link">About Us</a></li>
                 <li class="nav-dropdown">
-                    <a href="#modules" class="nav-link">Modules <i class="fas fa-caret-down"></i></a>
+                    <a href="#" class="nav-link">Modules <i class="fas fa-caret-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="clinical-management.html">Clinical Management</a></li>
                         <li><a href="hospital-operations.html">Hospital Operations</a></li>
@@ -80,7 +90,6 @@
                 <p>Streamline operations, enhance patient care, and improve efficiency with our comprehensive hospital management solution built on Odoo.</p>
                 <div class="hero-buttons">
                     <button class="btn btn-primary" type="button" id="heroCalendlyBtn">Get Started</button>
-                    <button class="btn btn-secondary">Watch Demo</button>
                 </div>
             </div>
             <div class="hero-image">
@@ -104,7 +113,7 @@
                         <div class="banner-text">
                             <h2>Hospital Dashboard Overview</h2>
                             <p>Real-time insights into patient care, bed occupancy, and operational metrics</p>
-                            <button class="btn btn-primary">View Demo</button>
+                            <a href="contact.html" class="btn btn-primary">Learn More</a>
                         </div>
                         <div class="banner-image">
                             <img src="assets/banners/odoo-dashboard-1.jpg" alt="Odoo Hospital Dashboard" />
@@ -116,7 +125,7 @@
                         <div class="banner-text">
                             <h2>Patient Management Interface</h2>
                             <p>Comprehensive patient records, appointments, and treatment tracking system</p>
-                            <button class="btn btn-primary">Learn More</button>
+                            <a href="contact.html" class="btn btn-primary">Learn More</a>
                         </div>
                         <div class="banner-image">
                             <img src="assets/banners/odoo-dashboard-2.jpg" alt="Odoo Patient Management" />
@@ -128,7 +137,7 @@
                         <div class="banner-text">
                             <h2>Analytics & Reporting</h2>
                             <p>Advanced analytics dashboard with customizable reports and performance metrics</p>
-                            <button class="btn btn-primary">Explore Features</button>
+                            <a href="contact.html" class="btn btn-primary">Learn More</a>
                         </div>
                         <div class="banner-image">
                             <img src="assets/banners/odoo-dashboard-3.jpg" alt="Odoo Analytics Dashboard" />
@@ -140,12 +149,6 @@
                     <button class="banner-dot" data-slide="1"></button>
                     <button class="banner-dot" data-slide="2"></button>
                 </div>
-                <button class="banner-nav banner-prev">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="banner-nav banner-next">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
             </div>
         </div>
     </section>
@@ -501,7 +504,6 @@
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="#features">Features</a></li>
                         <li><a href="#modules">Modules</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>

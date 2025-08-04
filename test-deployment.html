@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deployment Test - Odoo Hospital Website</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-item { margin: 10px 0; padding: 10px; border: 1px solid #ddd; }
+        .success { background-color: #d4edda; border-color: #c3e6cb; }
+        .error { background-color: #f8d7da; border-color: #f5c6cb; }
+        .warning { background-color: #fff3cd; border-color: #ffeaa7; }
+    </style>
+</head>
+<body>
+    <h1>🚀 Odoo Hospital Website - Deployment Test</h1>
+    
+    <div id="test-results">
+        <h2>Testing Website Components...</h2>
+        <div id="results"></div>
+    </div>
+
+    <script>
+        const tests = [
+            { name: 'Main CSS File', url: 'styles.css', type: 'css' },
+            { name: 'Main JS File', url: 'script.js', type: 'js' },
+            { name: 'Logo Image', url: 'assets/Logo/logo.png', type: 'image' },
+            { name: 'Banner Image 1', url: 'assets/banners/odoo-dashboard-1.jpg', type: 'image' },
+            { name: 'Banner Image 2', url: 'assets/banners/odoo-dashboard-2.jpg', type: 'image' },
+            { name: 'Banner Image 3', url: 'assets/banners/odoo-dashboard-3.jpg', type: 'image' },
+            { name: 'About Us Page', url: 'about-us.html', type: 'page' },
+            { name: 'Contact Page', url: 'contact.html', type: 'page' },
+            { name: 'Portfolio Page', url: 'portfolio.html', type: 'page' },
+            { name: 'Blog Page', url: 'blog.html', type: 'page' }
+        ];
+
+        const resultsDiv = document.getElementById('results');
+        let passedTests = 0;
+        let totalTests = tests.length;
+
+        function addResult(name, success, message = '') {
+            const div = document.createElement('div');
+            div.className = `test-item ${success ? 'success' : 'error'}`;
+            div.innerHTML = `
+                <strong>${success ? '✅' : '❌'} ${name}</strong>
+                ${message ? `<br><small>${message}</small>` : ''}
+            `;
+            resultsDiv.appendChild(div);
+            
+            if (success) passedTests++;
+        }
+
+        async function testFile(url, type) {
+            try {
+                const response = await fetch(url);
+                if (response.ok) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } catch (error) {
+                return false;
+            }
+        }
+
+        async function runTests() {
+            for (const test of tests) {
+                const success = await testFile(test.url, test.type);
+                addResult(test.name, success, success ? 'File found and accessible' : 'File not found or inaccessible');
+            }
+
+            // Final summary
+            const summaryDiv = document.createElement('div');
+            summaryDiv.className = `test-item ${passedTests === totalTests ? 'success' : passedTests > totalTests / 2 ? 'warning' : 'error'}`;
+            summaryDiv.innerHTML = `
+                <h3>📊 Test Summary</h3>
+                <strong>${passedTests}/${totalTests} tests passed</strong>
+                <br>
+                ${passedTests === totalTests ? 
+                    '🎉 All tests passed! Your website is ready for deployment.' :
+                    passedTests > totalTests / 2 ?
+                    '⚠️ Most tests passed. Review failed tests before deployment.' :
+                    '❌ Multiple tests failed. Please fix issues before deployment.'
+                }
+            `;
+            resultsDiv.appendChild(summaryDiv);
+        }
+
+        // Run tests when page loads
+        runTests();
+    </script>
+</body>
+</html> 
