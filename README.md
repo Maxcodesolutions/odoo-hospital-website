@@ -1,4 +1,4 @@
-# MediCare Odoo - Hospital Management Software Website
+# Maxcode Odoo - Hospital Management Software Website
 
 A modern, responsive website showcasing a comprehensive hospital management solution built on the Odoo platform. This website is designed to highlight the key features and benefits of hospital management software for healthcare providers.
 
